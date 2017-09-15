@@ -2,29 +2,15 @@
 
 PHP royal funeral pyre
 
-## PHP Framework
+## Resource
 
-[Code Igniter](https://www.codeigniter.com/)
+### Front-End
 
-[Laravel](https://laravel.com/)
-
-### Learn PHP Framework
-
-[Learn How To use CI](https://www.tutorialspoint.com/codeigniter/)
-
-[Learn Laravel](https://www.tutorialspoint.com/laravel/)
-
-## jQuery Plugin
-
-Plugin for 3d Rotation from Picture
-
-[3dEye](https://github.com/VoidCanvas/3dEye)
-
-## CSS Framework
+#### CSS Framework
 
 [Bootstrap v4](http://getbootstrap.com/)
 
-## CSS Resource
+#### CSS Resource
 
 [Flex box by CSS Trick](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
@@ -32,12 +18,35 @@ Plugin for 3d Rotation from Picture
 
 [CSS Grid TH by Babelcoder](https://www.babelcoder.com/blog/posts/css-grid-layout)
 
-## REF website
+#### jQuery Plugin
 
-[Bangkok National Museum](http://www.virtualmuseum.finearts.go.th/bangkoknationalmuseums/index.php/th/)
+Plugin for 3d Rotation from Picture
 
-## Template Admin
+[3dEye](https://github.com/VoidCanvas/3dEye)
+
+#### Template Admin
 
 Admin Template in Bootstrap 4 version
 
 [SB Admin 1 & 2](https://startbootstrap.com/template-categories/admin-dashboard/)
+
+### Back-End
+
+#### PHP Article
+
+[Using PHP with MySQL - the right way](https://www.binpress.com/tutorial/using-php-with-mysql-the-right-way/17)
+
+#### PHP Framework
+
+[Code Igniter](https://www.codeigniter.com/)
+
+[Learn How To use CI](https://www.tutorialspoint.com/codeigniter/)
+
+[Laravel](https://laravel.com/)
+
+[Learn Laravel](https://www.tutorialspoint.com/laravel/)
+
+## REF website
+
+[Bangkok National Museum](http://www.virtualmuseum.finearts.go.th/bangkoknationalmuseums/index.php/th/)
+
