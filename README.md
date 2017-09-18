@@ -52,7 +52,7 @@ Admin Template in Bootstrap 4 version
 
 ## Evelonment
 
-LEMP Stack (Linux, Nginx, MariaDB/MySQL, PHP)
+LEMP Stack (Linux, Nginx:alpine, MariaDB:10.1/MySQL, PHP:7.1.0-fpm-alpine)
 
 ### Docker
 [install docker osx](https://docs.docker.com/docker-for-mac/install/)
