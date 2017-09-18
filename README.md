@@ -50,7 +50,7 @@ Admin Template in Bootstrap 4 version
 
 [Bangkok National Museum](http://www.virtualmuseum.finearts.go.th/bangkoknationalmuseums/index.php/th/)
 
-## Evelonment
+## Environment
 
 LEMP Stack (Linux, Nginx:alpine, MariaDB:10.1/MySQL, PHP:7.1.0-fpm-alpine)
 
