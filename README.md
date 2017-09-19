@@ -108,7 +108,7 @@ services:
   
    * index.php code
    ```
-   <?php phpinfo(): ?>
+   <?php phpinfo(); ?>
    ```
    
    2. Type in the terminal<code>docker-compose up -d</code> 
