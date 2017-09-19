@@ -56,3 +56,66 @@ LEMP Stack (Linux, Nginx:alpine, MariaDB:10.1/MySQL, PHP:7.1.0-fpm-alpine)
 
 [How to use docker(TH version)](https://medium.com/yii2-learning/%E0%B8%A1%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-lemp-stack-%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B9%86-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-docker-%E0%B8%81%E0%B8%B1%E0%B8%99-part2-6692c9c33c5f)
 
+#### Docker-compose 
+
+Create Evelonment LAMP(Linux, Apache, Mysql, PHP and PHPadmin)
+
+1. Create Folders and files
+```
+⇒  tree
+.
+├── docker-compose.yml
+├── html
+│   └── index.php
+└── mysql
+    ├── backup
+    ├── data
+    └── initdb
+```
+
+ * docker-compose.yml code
+ ```
+ version: '2'
+services:
+
+  php:
+    image: php:5-apache
+    container_name: php5_apache
+    restart: always
+    volumes:
+      - ./html/:/var/www/html
+    ports:
+      - 80:80
+
+  db:
+    image: mysql
+    container_name: mysql_php5
+    restart: always
+    volumes:
+        - ./mysql/initdb/:/docker-entrypoint-initdb.d
+        - ./mysql/data/:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=123132123
+      - MYSQL_DATABASE=test_php5
+      - MYSQL_USER=php5
+      - MYSQL_PASSWORD=123456
+
+  pma:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_for_php5
+    restart: always
+    ports:
+      - "8000:80"
+  ```
+  
+   * index.php code
+   ```
+   <?php phpinfo(): ?>
+   ```
+   
+   2. Type in the terminal<code>docker-compose up -d</code> 
+   
+   3. Now open your browser and go to: localhost in your browser you should see a PHP 5 info page, and localhost:8000 shold see phpmyadmin page
+   
+
+
