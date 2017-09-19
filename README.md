@@ -36,16 +36,6 @@ Admin Template in Bootstrap 4 version
 
 [Using PHP with MySQL - the right way](https://www.binpress.com/tutorial/using-php-with-mysql-the-right-way/17)
 
-#### PHP Framework
-
-[Code Igniter](https://www.codeigniter.com/)
-
-[Learn How To use CI](https://www.tutorialspoint.com/codeigniter/)
-
-[Laravel](https://laravel.com/)
-
-[Learn Laravel](https://www.tutorialspoint.com/laravel/)
-
 ## REF website
 
 [Bangkok National Museum](http://www.virtualmuseum.finearts.go.th/bangkoknationalmuseums/index.php/th/)
