@@ -1,0 +1,31 @@
+version: '2'
+services:
+
+  php:
+    image: php:5-apache
+    container_name: php5_apache
+    restart: always
+    volumes:
+      - ./html/:/var/www/html
+    ports:
+      - 80:80
+
+  db:
+    image: mysql
+    container_name: mysql_php5
+    restart: always
+    volumes:
+        - ./mysql/initdb/:/docker-entrypoint-initdb.d
+        - ./mysql/data/:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=123132123
+      - MYSQL_DATABASE=test_php5
+      - MYSQL_USER=php5
+      - MYSQL_PASSWORD=123456
+
+  pma:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_for_php5
+    restart: always
+    ports:
+      - "8000:80"
