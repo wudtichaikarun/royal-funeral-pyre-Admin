@@ -2,30 +2,42 @@ version: '2'
 services:
 
   php:
-    image: php:5-apache
-    container_name: php5_apache
+    build: ./php
+    container_name: php7-fpm-alpine
     restart: always
     volumes:
       - ./html/:/var/www/html
-    ports:
-      - 80:80
+    expose:
+      - "9000"
 
   db:
     image: mysql
-    container_name: mysql_php5
+    container_name: mysql_php7-fpm-alpine
     restart: always
     volumes:
         - ./mysql/initdb/:/docker-entrypoint-initdb.d
         - ./mysql/data/:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=123132123
-      - MYSQL_DATABASE=test_php5
-      - MYSQL_USER=php5
+      - MYSQL_DATABASE=test_php7-fpm-alpine
+      - MYSQL_USER=php7-fpm-alpine
       - MYSQL_PASSWORD=123456
+  
+  nginx:
+    image: nginx:alpine
+    container_name: lemp_nginx
+    restart: always
+    volumes:
+      - ./nginx/conf/nginx.conf:/etc/nginx/conf/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    volumes_from:
+      - php
+    ports:
+      - 80:80
 
   pma:
     image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin_for_php5
+    container_name: phpmyadmin
     restart: always
     ports:
-      - "8000:80"
+      - "4000:80"
