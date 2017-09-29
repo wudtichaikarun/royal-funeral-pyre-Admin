@@ -9,6 +9,25 @@ body {
 #wrapper {
   width: 100%;
 }
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
 #page-wrapper {
   padding: 0 15px;
   min-height: 568px;
@@ -431,4 +450,21 @@ table.dataTable thead .sorting:after {
     border-right-width: 14px;
     border-left-width: 0;
   }
+}
+  
+.add-object{
+  text-align: center;
+}
+
+.btn-select {
+  margin-left: 5px;
+  width: 90px;
+}
+.artis-select {
+  margin-right: 5px;
+}
+.btn-form-submit{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
