@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 body {
-  background-color: #f8f8f8;
+  background-color: rgba(223, 235, 238, 0.17);
 }
 #wrapper {
   width: 100%;
@@ -452,9 +452,6 @@ table.dataTable thead .sorting:after {
   }
 }
   
-.add-object{
-  text-align: center;
-}
 
 .btn-select {
   margin-left: 5px;
@@ -468,3 +465,37 @@ table.dataTable thead .sorting:after {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.card {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px 40px;
+  border-radius: 4px;
+}
+
+.fullCard{
+  margin: 0 15px;
+  padding: 20px 0;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row {
+  margin-bottom: 30px;
+}
+
+label {
+  color: gray;
+}
+
+.fontHeader {
+  padding: 20px 0 0 0;
+  color: gray;
+  font-size: 3rem;
+}
+
+.line-separator{
+  height:1px;
+  background:#717171;
+  border-bottom:1px solid rgb(224,224,224);
+  }
