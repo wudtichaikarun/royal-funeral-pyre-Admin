@@ -398,6 +398,7 @@ input[type="radio"] {
   -ms-appearance: checkbox;     /* not currently supported */
 }
 
+ /* Form style*/
 .btn-space, .btn-info {
   margin-right: 2px;
 }
@@ -423,7 +424,7 @@ input[type="radio"] {
 }
 
 
-/* Modal table dite imgs/videos */
+/* Modal --Table--  imgs/videos */
 th, td {
   text-align: center;
   margin-top: auto;
@@ -454,3 +455,20 @@ img {
   text-align: center;
 }
 
+/* View objects Page */
+div.row.objectSearch {
+  background-color: rgb(234,236,239) !important;
+  padding-top: 10px;
+  margin: 0 2px 0 2px;
+  height: 60px;
+}
+
+b {
+  font-size: 1.1rem;
+  color: gray;
+}
+
+
+.highcharts-root{
+  font-family: 'Maitree', serif !important; 
+}

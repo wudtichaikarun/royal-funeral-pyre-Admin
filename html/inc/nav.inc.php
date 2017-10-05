@@ -5,35 +5,43 @@
 <div class="collapse navbar-collapse" id="navbarResponsive">
   <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="หน้าหลัก">
-      <a class="nav-link" href="index.html">
+      <a class="nav-link" href="index.php">
         <i class="fa fa-fw fa-bar-chart-o"></i>
         <span class="nav-link-text">หน้าหลัก</span>
       </a>
     </li>
 
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="ชิ้นงาน">
-      <a class="nav-link" href="charts.html">
-        <i class="fa fa-fw fa-list-alt"></i>
+      <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+      <i class="fa fa-table" aria-hidden="true"></i>
         <span class="nav-link-text">ชิ้นงาน</span>
       </a>
+      <ul class="sidenav-second-level collapse" id="collapseComponents">
+      <li>
+          <a href="objectView.php">จัดการชิ้นงาน</a>
+        </li>  
+      <li>
+          <a href="objectAdd.php">เพิ่มชิ้นงาน</a>
+        </li>
+      </ul>
     </li>
 
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="กลุ่มชิ้นงาน">
-      <a class="nav-link" href="charts.html">
+      <a class="nav-link" href="groupView.php">
         <i class="fa fa-fw fa-object-group"></i>
         <span class="nav-link-text">กลุ่มชิ้นงาน</span>
       </a>
     </li>
 
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="หมวดหมู่">
-      <a class="nav-link" href="charts.html">
+      <a class="nav-link" href="categoryView.php">
         <i class="fa fa-fw fa-sitemap"></i>
         <span class="nav-link-text">หมวดหมู่</span>
       </a>
     </li>
 
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="ศิลปิน">
-      <a class="nav-link" href="tables.html">
+      <a class="nav-link" href="artistView.php">
         <i class="fa fa-fw fa-group"></i>
         <span class="nav-link-text">ศิลปิน</span>
       </a>

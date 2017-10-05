@@ -2,20 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <?php include_once('./inc/linkTop.inc.php')?>
   <title>SB Admin - Start Bootstrap Template</title>
-  <!-- Bootstrap core CSS-->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom fonts for this template-->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- Custom styles for this template-->
-  <link href="css/sb-admin.css" rel="stylesheet">
-  <!-- Google font-->
-  <link href="https://fonts.googleapis.com/css?family=Maitree" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -207,7 +195,7 @@
                     </div>
                   </div>
                   <div class="col-lg-5">
-                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#editeImgVideo"> จัดการรูปภาพและวิดีโอ </button>
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#editImgVideo"> จัดการรูปภาพและวิดีโอ </button>
                   </div>
                 </div>
 
@@ -275,346 +263,336 @@
     <div>
 
     <footer class="sticky-footer">
-        <div class="container">
-          <div class="text-center">
-            <small>ลิขสิทธิ์ © Romantic</small>
-          </div>
+      <div class="container">
+        <div class="text-center">
+          <small>ลิขสิทธิ์ © Romantic</small>
         </div>
-      </footer>
-      <!-- Scroll to Top Button-->
-      <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fa fa-angle-up"></i>
-      </a>
-      <!-- Logout Modal-->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-              </button>
-            </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-            <div class="modal-footer">
-              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-              <a class="btn btn-primary" href="login.html">ออกจากระบบ</a>
-            </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">ออกจากระบบ</a>
           </div>
         </div>
       </div>
-      <!-- Edite Images And Video Modal -->
-      <div class="modal fade bd-example-modal-lg" id="editeImgVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                คลิกเพื่อเลือกจัดการข้อมูล รปภาพ/วิดีโอ
-                <span class="btn btn-outline-primary" id="showImgsTable"><i class="fa fa-picture-o" aria-hidden="true"></i> จัดการรูปภาพ</span>
-                <span class="btn btn-outline-primary" id="showVideosTable"><i class="fa fa-video-camera" aria-hidden="true"></i> จัดการวิดีโอ</span>
-              </h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+    </div>
+    <!-- Edit Images And Video Modal -->
+    <div class="modal fade bd-example-modal-lg" id="editImgVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              คลิกเพื่อเลือกจัดการข้อมูล รปภาพ/วิดีโอ
+              <span class="btn btn-outline-primary" id="showImgsTable"><i class="fa fa-picture-o" aria-hidden="true"></i> จัดการรูปภาพ</span>
+              <span class="btn btn-outline-primary" id="showVideosTable"><i class="fa fa-video-camera" aria-hidden="true"></i> จัดการวิดีโอ</span>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">         
+            <div id="imgsTable">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active">จัดการรูปภาพ</li>
+              </ol>
+              <table class="table table-bordered" >
+                <thead class="thead-inverse">
+                  <tr>
+                    <th class="th-icon">รหัสรูป</th>
+                    <th class="th-img-name">ชื่อรูป</th>
+                    <th class="th-img">รูปภาพ</th>
+                    <th class="th-icon">หมุนซ้าย</th>
+                    <th class="th-icon">หมุนขวา</th>
+                    <th class="th-icon">ลบรูป</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="flex-container">
+                    <th class="flex-item" scope="row">1</th>
+                    <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                    <td class="flex-item" ><img src="../imgs/Art_01_0001.jpg" class="img-thumbnail" alt="..."></td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                        <i class="fa fa-undo" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-repeat" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="flex-container">
+                    <th class="flex-item" scope="row">2</th>
+                    <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                    <td class="flex-item" ><img src="../imgs/Art_01_002.jpg" class="img-thumbnail" alt="..."></td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                        <i class="fa fa-undo" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-repeat" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="flex-container">
+                    <th class="flex-item" scope="row">3</th>
+                    <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                    <td class="flex-item" ><img src="../imgs/Art_01_003.jpg" class="img-thumbnail" alt="..."></td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                        <i class="fa fa-undo" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-repeat" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="flex-container">
+                    <th class="flex-item" scope="row">1</th>
+                    <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                    <td class="flex-item" ><img src="../imgs/Art_01_004.jpg" class="img-thumbnail" alt="..."></td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                        <i class="fa fa-undo" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-repeat" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="flex-container">
+                    <th class="flex-item" scope="row">2</th>
+                    <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                    <td class="flex-item" ><img src="../imgs/Art_02_001.jpg" class="img-thumbnail" alt="..."></td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                        <i class="fa fa-undo" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-repeat" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="flex-container">
+                    <th class="flex-item" scope="row">3</th>
+                    <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                    <td class="flex-item" ><img src="../imgs/Art_02_002.jpg" class="img-thumbnail" alt="..."></td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                        <i class="fa fa-undo" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-repeat" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="modal-body">         
-              <div id="imgsTable">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item active">จัดการรูปภาพ</li>
-                </ol>
-                <table class="table table-bordered" >
-                  <thead class="thead-inverse">
-                    <tr>
-                      <th class="th-icon">รหัสรูป</th>
-                      <th class="th-img-name">ชื่อรูป</th>
-                      <th class="th-img">รูปภาพ</th>
-                      <th class="th-icon">หมุนซ้าย</th>
-                      <th class="th-icon">หมุนขวา</th>
-                      <th class="th-icon">ลบรูป</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="flex-container">
-                      <th class="flex-item" scope="row">1</th>
-                      <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                      <td class="flex-item" ><img src="./imgs/Art_01_0001.jpg" class="img-thumbnail" alt="..."></td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                          <i class="fa fa-undo" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="flex-container">
-                      <th class="flex-item" scope="row">2</th>
-                      <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                      <td class="flex-item" ><img src="./imgs/Art_01_002.jpg" class="img-thumbnail" alt="..."></td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                          <i class="fa fa-undo" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="flex-container">
-                      <th class="flex-item" scope="row">3</th>
-                      <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                      <td class="flex-item" ><img src="./imgs/Art_01_003.jpg" class="img-thumbnail" alt="..."></td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                          <i class="fa fa-undo" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="flex-container">
-                      <th class="flex-item" scope="row">1</th>
-                      <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                      <td class="flex-item" ><img src="./imgs/Art_01_004.jpg" class="img-thumbnail" alt="..."></td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                          <i class="fa fa-undo" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="flex-container">
-                      <th class="flex-item" scope="row">2</th>
-                      <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                      <td class="flex-item" ><img src="./imgs/Art_02_001.jpg" class="img-thumbnail" alt="..."></td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                          <i class="fa fa-undo" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="flex-container">
-                      <th class="flex-item" scope="row">3</th>
-                      <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                      <td class="flex-item" ><img src="./imgs/Art_02_002.jpg" class="img-thumbnail" alt="..."></td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                          <i class="fa fa-undo" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div id="videosTable" style="display:none">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item active">จัดการวิดีโอ</li>
-                </ol>
-                <table class="table table-bordered">
-                  <thead class="thead-inverse">
-                    <tr>
-                      <th class="th-icon">รหัสวิดีโอ</th>
-                      <th class="th-img-name">ชื่อวิดีโอ</th>
-                      <th class="th-img">วิดีโอ</th>
-                      <th class="th-icon">หมุนซ้าย</th>
-                      <th class="th-icon">หมุนขวา</th>
-                      <th class="th-icon">ลบวิดีโอ</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="flex-container">
-                      <th class="flex-item" scope="row">1</th>
-                      <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                      <td class="flex-item" ><img src="./imgs/Art_01_0001.jpg" class="img-thumbnail" alt="..."></td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                          <i class="fa fa-undo" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="flex-container">
-                      <th class="flex-item" scope="row">2</th>
-                      <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                      <td class="flex-item" ><img src="./imgs/Art_01_002.jpg" class="img-thumbnail" alt="..."></td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                          <i class="fa fa-undo" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="flex-container">
-                      <th class="flex-item" scope="row">3</th>
-                      <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                      <td class="flex-item" ><img src="./imgs/Art_01_003.jpg" class="img-thumbnail" alt="..."></td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                          <i class="fa fa-undo" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="flex-container">
-                      <th class="flex-item" scope="row">1</th>
-                      <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                      <td class="flex-item" ><img src="./imgs/Art_01_004.jpg" class="img-thumbnail" alt="..."></td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                          <i class="fa fa-undo" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="flex-container">
-                      <th class="flex-item" scope="row">2</th>
-                      <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                      <td class="flex-item" ><img src="./imgs/Art_02_001.jpg" class="img-thumbnail" alt="..."></td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                          <i class="fa fa-undo" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr class="flex-container">
-                      <th class="flex-item" scope="row">3</th>
-                      <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                      <td class="flex-item" ><img src="./imgs/Art_02_002.jpg" class="img-thumbnail" alt="..."></td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                          <i class="fa fa-undo" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-repeat" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                      <td class="flex-item">
-                        <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div id="videosTable" style="display:none">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active">จัดการวิดีโอ</li>
+              </ol>
+              <table class="table table-bordered">
+                <thead class="thead-inverse">
+                  <tr>
+                    <th class="th-icon">รหัสวิดีโอ</th>
+                    <th class="th-img-name">ชื่อวิดีโอ</th>
+                    <th class="th-img">วิดีโอ</th>
+                    <th class="th-icon">หมุนซ้าย</th>
+                    <th class="th-icon">หมุนขวา</th>
+                    <th class="th-icon">ลบวิดีโอ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="flex-container">
+                    <th class="flex-item" scope="row">1</th>
+                    <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                    <td class="flex-item" ><img src="../imgs/Art_01_0001.jpg" class="img-thumbnail" alt="..."></td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                        <i class="fa fa-undo" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-repeat" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="flex-container">
+                    <th class="flex-item" scope="row">2</th>
+                    <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                    <td class="flex-item" ><img src="../imgs/Art_01_002.jpg" class="img-thumbnail" alt="..."></td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                        <i class="fa fa-undo" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-repeat" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="flex-container">
+                    <th class="flex-item" scope="row">3</th>
+                    <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                    <td class="flex-item" ><img src="../imgs/Art_01_003.jpg" class="img-thumbnail" alt="..."></td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                        <i class="fa fa-undo" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-repeat" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="flex-container">
+                    <th class="flex-item" scope="row">1</th>
+                    <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                    <td class="flex-item" ><img src="../imgs/Art_01_004.jpg" class="img-thumbnail" alt="..."></td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                        <i class="fa fa-undo" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-repeat" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="flex-container">
+                    <th class="flex-item" scope="row">2</th>
+                    <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                    <td class="flex-item" ><img src="../imgs/Art_02_001.jpg" class="img-thumbnail" alt="..."></td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                        <i class="fa fa-undo" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-repeat" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="flex-container">
+                    <th class="flex-item" scope="row">3</th>
+                    <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                    <td class="flex-item" ><img src="../imgs/Art_02_002.jpg" class="img-thumbnail" alt="..."></td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                        <i class="fa fa-undo" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-repeat" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    <td class="flex-item">
+                      <button type="button" class="btn btn-info tableEdite-icon" onclick="addVideo(this)">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
-              <button type="button" class="btn btn-primary">บันทึกข้อมูล</button>
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
+            <button type="button" class="btn btn-primary">บันทึกข้อมูล</button>
           </div>
         </div>
       </div>
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
-    <!--  jquery-confirm-->
-    <link rel="stylesheet" type="text/css" href="vendor/jquery/jquery-confirm.css"/>
-    <script type="text/javascript" src="vendor/jquery/jquery-confirm.js"></script>
+    </div>
+    <?php include_once('./inc/linkButtom.inc.php') ?>
     <script>
     // Show  Modal videos table and hide images table
     $('#showVideosTable').click(function () {
