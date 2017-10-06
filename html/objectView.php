@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <?php include_once('./inc/linkTop.inc.php')?>
   <title>SB Admin - Start Bootstrap Template</title>
@@ -26,7 +25,7 @@
             <span class="input-group-btn">
               <button class="btn btn-info" type="button">ค้นหา</button>
             </span>
-            <button  type="button" class="btn btn-info">
+            <button  type="button" class="btn btn-info" onclick="addObject()" >
                 <i class="fa fa-plus-circle" aria-hidden="true"> เพิ่มชิ้นงาน</i>
             </button>
           </div>
@@ -63,7 +62,7 @@
           <table class="table table-bordered" >
             <thead>
               <tr>
-                <th class="th-icon">รหัสชิ้นงาน</th>
+                <th class="th-id">รหัสชิ้นงาน</th>
                 <th class="th-img-name">ชื่อชิ้นงาน</th>
                 <th class="th-img">รูปภาพหลัก</th>
                 <th class="th-icon">แก้ไข/ปรับปรุง</th>
@@ -76,7 +75,7 @@
                 <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
                 <td class="flex-item" ><img src="../imgs/Art_01_0001.jpg" class="img-thumbnail" alt="..."></td>
                 <td class="flex-item">
-                  <button type="button" class="btn btn-info tableEdite-icon" onclick="">
+                  <button type="button" class="btn btn-info tableEdite-icon" onclick="editObject()">
                   <i class="fa fa-pencil" aria-hidden="true"></i>
                   </button>
                 </td>
@@ -198,6 +197,14 @@
     </div>
     <?php include_once('./inc/linkButtom.inc.php') ?>
     <script>
+
+    function addObject() {
+      window.location.assign("objectAdd.php");
+    }
+
+    function editObject() {
+      window.location.assign("objectEdit.php");
+    }
 
     $('.example-p-1').on('click', function () {
       $.confirm({

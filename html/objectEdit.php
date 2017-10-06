@@ -16,7 +16,7 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="#">ชิ้นงาน</a>
+          <a href="objectView.php">ชิ้นงาน</a>
         </li>
         <li class="breadcrumb-item active">แก้ไขชิ้นงาน</li>
       </ol>
@@ -308,6 +308,9 @@
           <div class="modal-body">         
             <div id="imgsTable">
               <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="objectEdit.php">แก้ไขชิ้นงาน</a>
+                </li>
                 <li class="breadcrumb-item active">จัดการรูปภาพ</li>
               </ol>
               <table class="table table-bordered" >
@@ -447,6 +450,9 @@
             </div>
             <div id="videosTable" style="display:none">
               <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="objectEdit.php">แก้ไขชิ้นงาน</a>
+                </li>
                 <li class="breadcrumb-item active">จัดการวิดีโอ</li>
               </ol>
               <table class="table table-bordered">

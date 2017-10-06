@@ -11,7 +11,7 @@
       </a>
     </li>
 
-    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="ชิ้นงาน">
+    <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="ชิ้นงาน">
       <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
       <i class="fa fa-table" aria-hidden="true"></i>
         <span class="nav-link-text">ชิ้นงาน</span>
@@ -24,6 +24,12 @@
           <a href="objectAdd.php">เพิ่มชิ้นงาน</a>
         </li>
       </ul>
+    </li> -->
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="กลุ่มชิ้นงาน">
+      <a class="nav-link" href="objectView.php">
+        <i class="fa fa-fw fa-table"></i>
+        <span class="nav-link-text">จัดการชิ้นงาน</span>
+      </a>
     </li>
 
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="กลุ่มชิ้นงาน">
@@ -48,28 +54,28 @@
     </li>
 
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="ความเชี่ยวชาญ">
-      <a class="nav-link" href="tables.html">
+      <a class="nav-link" href="skillView.php">
         <i class="fa fa-fw fa-paint-brush"></i>
         <span class="nav-link-text">ความเชี่ยวชาญ</span>
       </a>
     </li>
 
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="รูปแบบศิลปกรรม">
-      <a class="nav-link" href="tables.html">
+      <a class="nav-link" href="artstyleView.php">
         <i class="fa fa-fw fa-cubes"></i>
         <span class="nav-link-text">รูปแบบศิลปกรรม</span>
       </a>
     </li>
 
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="วัสดุ">
-      <a class="nav-link" href="tables.html">
+      <a class="nav-link" href="materialView.php">
         <i class="fa fa-fw fa-barcode"></i>
         <span class="nav-link-text">วัสดุ</span>
       </a>
     </li>
 
     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="ผู้ใช้">
-      <a class="nav-link" href="tables.html">
+      <a class="nav-link" href="usersView.php">
         <i class="fa fa-fw fa-user-circle"></i>
         <span class="nav-link-text">ผู้ใช้</span>
       </a>

@@ -367,10 +367,10 @@ label {
 }
 
 .fontHeader {
-  text-align: center;
-  padding: 20px 0 0 0;
+  text-align: left;
+  padding: 20px 0 5px 10px;
   color: gray;
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 .line-separator {
@@ -407,6 +407,11 @@ input[type="radio"] {
   margin: 0;
 }
 
+a.navbar-brand {
+ font-size: 1.1rem;
+ letter-spacing: 1px;
+}
+
 .form-control {
   border-radius: 4px !important;
 }
@@ -423,7 +428,11 @@ input[type="radio"] {
   margin-top: 3px;
 }
 
-
+/* Table */
+thead {
+  background: rgb(234,236,239);
+  color: gray;
+}
 /* Modal --Table--  imgs/videos */
 th, td {
   text-align: center;
@@ -432,14 +441,21 @@ th, td {
 }
 
 th.th-img {
+  border-left: 2px solid rgb(245,245,245) !important;
   width: 15%;
 }
 
+th.th-name {
+  border-left: 2px solid rgb(245,245,245) !important;
+}
+
 th.th-icon {
+  border-left: 2px solid rgb(245,245,245) !important;
   width: 10%;
 }
 
 th.th-img-name {
+  border-left: 2px solid rgb(245,245,245) !important;
   width: 45%;
 }
 
@@ -471,4 +487,8 @@ b {
 
 .highcharts-root{
   font-family: 'Maitree', serif !important; 
+}
+
+li.nav-item:hover {
+  background-color: rgb(34,37,41);
 }
