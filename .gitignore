@@ -62,3 +62,5 @@ resources/
 
 # sql data
 mysql/data
+
+design/*
