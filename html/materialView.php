@@ -42,54 +42,54 @@
                 <th class="th-name">ชื่อวัสดุ</th>
                 <th class="th-name">ชื่อวัสดุ(ภาษาอังกฤษ)</th>
                 <th class="th-status">สถานะ</th>
-                <th class="th-icon">แก้ไข/ปรับปรุง</th>
+                <th class="th-icon">แก้ไข</th>
                 <th class="th-icon">ลบ</th>
               </tr>
             </thead>
             <tbody>
               <tr class="flex-container">
-                <th class="flex-item" scope="row">1</th>
-                <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                <td class="flex-item" >abcd efghijklmnop</td>
-                <td class="flex-item" >สถานะ 1</td>
-                <td class="flex-item">
+                <th scope="row">1</th>
+                <td>พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                <td>abcd efghijklmnop</td>
+                <td>สถานะ 1</td>
+                <td>
                   <button type="button" class="btn btn-info tableEdite-icon" data-toggle="modal" data-target="#editMaterial">
                   <i class="fa fa-pencil" aria-hidden="true"></i>
                   </button>
                 </td>
-                <td class="flex-item">
+                <td>
                   <button type="button" class="btn btn-info tableEdite-icon" >
                   <i class="fa fa-trash" aria-hidden="true"></i>
                   </button>
                 </td>
               </tr>
               <tr class="flex-container">
-                <th class="flex-item" scope="row">2</th>
-                <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                <td class="flex-item" >abcd efghijklfsafasmnop</td>
-                <td class="flex-item" >สถานะ 2</td>
-                <td class="flex-item">
+                <th scope="row">2</th>
+                <td>พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                <td>abcd efghijklfsafasmnop</td>
+                <td>สถานะ 2</td>
+                <td>
                   <button type="button" class="btn btn-info tableEdite-icon" data-toggle="modal" data-target="#editSkill">
                   <i class="fa fa-pencil" aria-hidden="true"></i>
                   </button>
                 </td>
-                <td class="flex-item">
+                <td>
                   <button type="button" class="btn btn-info tableEdite-icon" >
                   <i class="fa fa-trash" aria-hidden="true"></i>
                   </button>
                 </td>
               </tr>
               <tr class="flex-container">
-                <th class="flex-item" scope="row">3</th>
-                <td class="flex-item" >พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
-                <td class="flex-item" >abcd efghijklmnodfafsafasp</td>
-                <td class="flex-item" >สถานะ 3</td>
-                <td class="flex-item">
+                <th scope="row">3</th>
+                <td>พระนารายณ์ ผู้อวตารมาบนโลกเพื่อปราบยุคเข็ญ</td>
+                <td>abcd efghijklmnodfafsafasp</td>
+                <td>สถานะ 3</td>
+                <td>
                   <button type="button" class="btn btn-info tableEdite-icon" data-toggle="modal" data-target="#editGroup">
                   <i class="fa fa-pencil" aria-hidden="true"></i>
                   </button>
                 </td>
-                <td class="flex-item">
+                <td>
                   <button type="button" class="btn btn-info tableEdite-icon" >
                   <i class="fa fa-trash" aria-hidden="true"></i>
                   </button>

@@ -410,6 +410,7 @@ input[type="radio"] {
 a.navbar-brand {
  font-size: 1.1rem;
  letter-spacing: 1px;
+ color: #62DEBE !important;
 }
 
 .form-control {
@@ -484,11 +485,17 @@ b {
   color: gray;
 }
 
-
 .highcharts-root{
   font-family: 'Maitree', serif !important; 
 }
 
 li.nav-item:hover {
   background-color: rgb(34,37,41);
+  font-size: 1.02rem;
+}
+
+#container {
+ margin: 0;
+ height: 600px;
+ width: 100%;
 }

@@ -17,7 +17,11 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item active">หน้าหลัก</li>
       </ol>
-      <div id="container" style="width: 100%; height: 600px; margin: 0 auto"></div>
+      <div class="row">
+          <div class="col-lg-12">
+          <div id="container"></div>
+          </div>
+      </div>
     </div>
 
     <footer class="sticky-footer">

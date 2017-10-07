@@ -21,12 +21,12 @@
         </div>
         <div class="col-lg-6">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="ใส่ชื่อวัสดุ....">
+            <input type="text" class="form-control" placeholder="ใส่ชื่อผู้ใช้งาน....">
             <span class="input-group-btn">
               <button class="btn btn-info" type="button">ค้นหา</button>
             </span>
-            <button  type="button" class="btn btn-info" data-toggle="modal" data-target="#addMaterial">
-                <i class="fa fa-plus-circle" aria-hidden="true"> เพิ่มวัสดุ</i>
+            <button  type="button" class="btn btn-info" data-toggle="modal" data-target="#addUser">
+                <i class="fa fa-plus-circle" aria-hidden="true"> เพิ่มผู้ใช้งาน</i>
             </button>
           </div>
         </div>
@@ -89,7 +89,7 @@
                 <td>first name a</td>
                 <td>last name a</td>
                 <td>
-                  <button type="button" class="btn btn-info tableEdite-icon" data-toggle="modal" data-target="#editMaterial">
+                  <button type="button" class="btn btn-info tableEdite-icon" data-toggle="modal" data-target="#editUser">
                   <i class="fa fa-pencil" aria-hidden="true"></i>
                   </button>
                 </td>
@@ -105,7 +105,7 @@
                 <td>first name a</td>
                 <td>last name a</td>
                 <td>
-                  <button type="button" class="btn btn-info tableEdite-icon" data-toggle="modal" data-target="#editMaterial">
+                  <button type="button" class="btn btn-info tableEdite-icon" data-toggle="modal" data-target="#editUser">
                   <i class="fa fa-pencil" aria-hidden="true"></i>
                   </button>
                 </td>
@@ -121,7 +121,7 @@
                 <td>first name a</td>
                 <td>last name a</td>
                 <td>
-                  <button type="button" class="btn btn-info tableEdite-icon" data-toggle="modal" data-target="#editMaterial">
+                  <button type="button" class="btn btn-info tableEdite-icon" data-toggle="modal" data-target="#editUser">
                   <i class="fa fa-pencil" aria-hidden="true"></i>
                   </button>
                 </td>
@@ -166,12 +166,12 @@
       </div>
     </div>
     <!-- Add Group Modal -->
-    <div class="modal fade bd-example-modal-lg" id="addMaterial" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+    <div class="modal fade bd-example-modal-lg" id="addUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">
-              เพิ่มวัสดุ
+              เพิ่มผู้ใช้งาน
             </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -180,37 +180,61 @@
           <div class="modal-body">         
             <div id="imgsTable">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item active">เพิ่มวัสดุ</li>
+                <li class="breadcrumb-item active">ผู้ใช้งาน</li>
               </ol>
             </div>
             <form>
               <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="form-group">
-                        <label> 
-                          <span class="nav-link-text">ชื่อวัสดุ</span>
-                          <i class="fa fa-fw fa-asterisk icon-topic"></i>    
-                        </label>
+                        <label>ชื่อ </label>
                         <input class="form-control" >
                       </div>
                       <div class="form-group">
-                        <label> 
-                          <span class="nav-link-text">ชื่อวัสดุ(ภาษาอังกฤษ)</span>
-                          <i class="fa fa-fw fa-asterisk icon-topic"></i>    
-                        </label>
+                        <label>นามสกุล </label>
                         <input class="form-control" >
                       </div>
                       <div class="form-group">
-                        <label>สถานนะ</label>
+                        <label>
+                          <span class="nav-link-text">ประเภทผู้ใช้งาน</span>
+                          <i class="fa fa-fw fa-asterisk icon-topic"></i>
+                        </label>
                         <select class="form-control">
-                          <option>เลือกสถานะ</option>
+                          <option>ประเภทผู้ใช้งาน</option>
                           <option>2</option>
                           <option>3</option>
                           <option>4</option>
                           <option>5</option>
                         </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div class="form-group">
+                        <label> 
+                          <span class="nav-link-text">ชื่อเพื่อเข้าใช้งานระบบ</span>
+                          <i class="fa fa-fw fa-asterisk icon-topic"></i>    
+                        </label>
+                        <input class="form-control" >
+                      </div>
+                      <div class="form-group">
+                        <label> 
+                          <span class="nav-link-text">รหัสผ่าน</span>
+                          <i class="fa fa-fw fa-asterisk icon-topic"></i>    
+                        </label>
+                        <input class="form-control" type="password">
+                      </div>
+                      <div class="form-group">
+                        <label> 
+                          <span class="nav-link-text">ยืนยัน(รหัสผ่าน)</span>
+                          <i class="fa fa-fw fa-asterisk icon-topic"></i>    
+                        </label>
+                        <input class="form-control" type="password">
                       </div>
                     </div>
                   </div>
@@ -226,12 +250,12 @@
       </div>
     </div>
     <!-- Edite Group Modal -->
-    <div class="modal fade bd-example-modal-lg" id="editMaterial" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+    <div class="modal fade bd-example-modal-lg" id="editUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">
-              แก้ไขวัสดุ
+              แก้ผู้ใช้งาน
             </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -240,37 +264,61 @@
           <div class="modal-body">         
             <div id="imgsTable">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item active">แก้ไขวัสดุ</li>
+                <li class="breadcrumb-item active">ผู้ใช้งาน</li>
               </ol>
             </div>
             <form>
               <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="form-group">
-                        <label> 
-                          <span class="nav-link-text">ชื่อวัสดุ</span>
-                          <i class="fa fa-fw fa-asterisk icon-topic"></i>    
-                        </label>
+                        <label>ชื่อ </label>
                         <input class="form-control" >
                       </div>
                       <div class="form-group">
-                        <label> 
-                          <span class="nav-link-text">ชื่อวัสดุ(ภาษาอังกฤษ)</span>
-                          <i class="fa fa-fw fa-asterisk icon-topic"></i>    
-                        </label>
+                        <label>นามสกุล </label>
                         <input class="form-control" >
                       </div>
                       <div class="form-group">
-                        <label>สถานนะ</label>
+                        <label>
+                          <span class="nav-link-text">ประเภทผู้ใช้งาน</span>
+                          <i class="fa fa-fw fa-asterisk icon-topic"></i>
+                        </label>
                         <select class="form-control">
-                          <option>เลือกสถานะ</option>
+                          <option>ประเภทผู้ใช้งาน</option>
                           <option>2</option>
                           <option>3</option>
                           <option>4</option>
                           <option>5</option>
                         </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div class="form-group">
+                        <label> 
+                          <span class="nav-link-text">ชื่อเพื่อเข้าใช้งานระบบ</span>
+                          <i class="fa fa-fw fa-asterisk icon-topic"></i>    
+                        </label>
+                        <input class="form-control" >
+                      </div>
+                      <div class="form-group">
+                        <label> 
+                          <span class="nav-link-text">รหัสผ่าน</span>
+                          <i class="fa fa-fw fa-asterisk icon-topic"></i>    
+                        </label>
+                        <input class="form-control" type="password">
+                      </div>
+                      <div class="form-group">
+                        <label> 
+                          <span class="nav-link-text">ยืนยัน(รหัสผ่าน)</span>
+                          <i class="fa fa-fw fa-asterisk icon-topic"></i>    
+                        </label>
+                        <input class="form-control" type="password">
                       </div>
                     </div>
                   </div>
