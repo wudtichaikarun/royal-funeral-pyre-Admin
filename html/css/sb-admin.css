@@ -441,6 +441,10 @@ th, td {
   align-items:center;
 }
 
+th.th-id-config {
+  width: 8%;
+}
+
 th.th-img {
   border-left: 2px solid rgb(245,245,245) !important;
   width: 15%;

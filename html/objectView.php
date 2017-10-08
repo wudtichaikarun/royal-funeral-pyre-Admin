@@ -62,7 +62,7 @@
           <table class="table table-bordered" >
             <thead>
               <tr>
-                <th class="th-id">รหัสชิ้นงาน</th>
+                <th class="th-id th-id-config">รหัสชิ้นงาน</th>
                 <th class="th-img-name">ชื่อชิ้นงาน</th>
                 <th class="th-img">รูปภาพหลัก</th>
                 <th class="th-icon">แก้ไข/ปรับปรุง</th>
